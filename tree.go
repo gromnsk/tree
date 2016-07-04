@@ -79,7 +79,7 @@ func (node *Node) Insert(data Data) (newNode *Node) {
 	for i := 0; i< len(node.child); i++ {
 		if (node.child[i] == nil) {
 			newNode = addNode(node, data)
-			treeIndex[data.Id] = node
+			treeIndex[data.Id] = newNode
 			node.child[i] = newNode
 
 			return
